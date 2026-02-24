@@ -49,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                 child: TextField(
                   controller: phonetextEditingController,
                   keyboardType: TextInputType.phone,
+                  style: TextStyle(color: Colors.black),
                   maxLength: 10,
                   decoration: InputDecoration(
                     label: Text('mobile number'),

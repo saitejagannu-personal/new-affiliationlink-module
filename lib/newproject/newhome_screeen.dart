@@ -195,7 +195,7 @@ class _NewhomeScreeenState extends State<NewhomeScreeen>
                 height: 350,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 233, 218, 218),
+                  color: const Color.fromARGB(255, 22, 20, 20),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(

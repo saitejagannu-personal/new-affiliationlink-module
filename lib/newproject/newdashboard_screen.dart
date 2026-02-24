@@ -73,6 +73,7 @@ int currentIndex =0;
                           children: [
                             pageViewLayout("https://assets.aboutamazon.com/dims4/default/0acc6e7/2147483647/strip/false/crop/1280x720+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F94%2F6d%2F08b35e09423ca8769d6b61cafec8%2Fdeal-reveal.jpg"),
                             pageViewLayout("https://www.shoppre.com/img/shoppre/shopping-festival-deals.jpg"),
+
                             pageViewLayout("https://www.mobilityindia.com/wp-content/uploads/2024/08/Lotus-Electronics-Unveils-Independence-Deal-Festival-Massive-Discounts-Up-to-70.jpg"),
                            
                           ],

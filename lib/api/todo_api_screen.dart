@@ -9,26 +9,35 @@ class TodoApiScreen extends StatefulWidget {
 }
 
 class _TodoApiScreenState extends State<TodoApiScreen> {
- 
- getDataWithSynchronous() async{
-  final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
-   {
-    print(response.statusCode);
-    print(response.body);
-  }
-  
- }
+  //synchronous
+  String data = "NA";
+  getDataWithAsynchronous() async{
+     http.Response response =
+        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/users"));
+        print(response.statusCode);
+        if (response.statusCode ==200) {
+        
+        setState(() {
+          data = response.body;
+        }); 
+  }}
+
   @override
   void initState() {
-    getDataWithSynchronous();
-  super.initState();
+    getDataWithAsynchronous();
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("TODO"),
-      backgroundColor: Colors.teal,
+      appBar: AppBar(title: Text("TODO"), backgroundColor: Colors.teal),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+       child: SelectableText( 
+        data,
+       style: TextStyle(fontSize: 14), 
+      ),
       ),
     );
   }
